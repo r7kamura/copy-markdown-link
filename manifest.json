@@ -21,7 +21,8 @@
   "commands": {
     "_execute_action": {
       "suggested_key": {
-        "default": "Ctrl+M"
+        "default": "Ctrl+M",
+        "mac": "MacCtrl+M"
       }
     }
   },
