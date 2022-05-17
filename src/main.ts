@@ -1,8 +1,24 @@
-import './style.css'
+import "./style.css";
 
-const app = document.querySelector<HTMLDivElement>('#app')!
+function copy({ plain }: { plain: string }) {
+  const listener = (event: any) => {
+    event.clipboardData.setData("text/plain", plain);
+    event.preventDefault();
+  };
+  document.addEventListener("copy", listener);
+  document.execCommand("copy");
+  document.removeEventListener("copy", listener);
+}
 
-app.innerHTML = `
-  <h1>Hello Vite!</h1>
-  <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-`
+chrome.tabs.query(
+  {
+    active: true,
+    currentWindow: true,
+  },
+  (tabs) => {
+    const { title, url } = tabs[0];
+    copy({
+      plain: `[${title}](${url})`,
+    });
+  }
+);
