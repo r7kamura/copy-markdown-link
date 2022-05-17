@@ -1,7 +1,5 @@
 {
-  "name": "copy-markdown-link",
   "private": true,
-  "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
