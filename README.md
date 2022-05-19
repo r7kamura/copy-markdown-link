@@ -6,6 +6,12 @@ Browser extension to copy link in Markdown format.
 
 ![](images/screenshot-pasted.png)
 
+## Install
+
+Install from Chrome Web Store:
+
+https://chrome.google.com/webstore/detail/copy-markdown-link/gkceaaphhbeanfciglgpffnncfpipjpa
+
 ## Usage
 
 ### Copy
