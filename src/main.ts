@@ -20,5 +20,5 @@ chrome.tabs.query(
     copy({
       plain: `[${title}](${url})`,
     });
-  }
+  },
 );
