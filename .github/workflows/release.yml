@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - CHANGELOG.md
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  tag:
-    uses: r7kamura/workflows/.github/workflows/changelog-tag-release.yml@main
+  run:
+    uses: r7kamura/workflows/.github/workflows/chrome-extension-release.yml@main
